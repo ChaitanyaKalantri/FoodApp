@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Ordering Application</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h1>Food Ordering Application</h1>
+      </div>
+
+      <div class="container">
+        <img class="mySlides" src="../static/index.jpg" style="width:100%>
+      </div>
+
+      <div class="jumbotron">
+        <h3>Order your food sitting at home!!!</h3>
+        <form class="form-survey"  method="POST">
+        
+        <table border = 1>
+         {% for key, values in result.iteritems() %}
+            
+            {% for v in values %}
+                <tr>
+                   <td> <input type="radio" name="r" id={{v}} value={{v}}> {{v}}<br> </td>
+                </tr>
+
+            {% endfor %}
+        
+         {% endfor %}
+      </table>
+       <input type="submit" value="Submit"> 
+      </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Zappos Food Service Application 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

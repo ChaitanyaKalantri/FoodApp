@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Ordering Application</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+  
+        <h1>Food Ordering Application</h1>
+      </div>
+
+      <div class="container">
+        <img class="mySlides" src="../static/success.gif" style="width:100%>
+      </div>
+
+      <div class="jumbotron">
+        <h3>Get Ready To Eat...Your Order will reach soon</h3>
+        <form class="form-survey"  method="POST">
+        <h1> Successfully Order Placed </h1>
+        <h2> {{ result }}</h2>
+        Enter the Order ID: <input type="text" name="order"><br>
+        
+       <input type="submit" value="Submit"> 
+      </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Zappos Food Service Application 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

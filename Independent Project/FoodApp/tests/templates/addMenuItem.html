@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Ordering Application</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+  
+        <h1>Food Ordering Application</h1>
+      </div>
+
+      <div class="container">
+        <img class="mySlides" src="../static/active.jpeg" style="width:100%>
+      </div>
+
+      <div class="jumbotron">
+        
+      <form method = "POST">
+
+        <div class="container">
+          <h2>Enter items for restaurant <input type="label" name="restaurant" value={{result[1]}} readonly></h2>
+          <h2>for menu id <input type="label" name="category" value={{result[0]}} readonly > </h2>
+            
+        <label><b>Name</b></label>
+        <input type="test" placeholder="Enter name" name="itemname" required>
+
+        <label><b>Cuisine</b></label>
+        <input type="test" placeholder="Enter Cuisine" name="cuisine" required>
+
+        <input type="submit" name="addMenuItem"></input>
+    </div>
+      </form>
+      <footer class="footer">
+        <p>&copy; Zappos Food Service Application 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
+
+
+
