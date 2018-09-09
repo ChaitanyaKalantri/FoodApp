@@ -26,7 +26,7 @@
         <form class="form-survey"  method="POST">
         
         <table border = 1>
-         {% for key, values in result.iteritems() %}
+         {% for key, values in result.items() %}
             <h2>Showing categories for restaurant <input type="label" name="restaurant" value={{key}} readonly>  </h2>
             {% for v in values %}
                 <tr>

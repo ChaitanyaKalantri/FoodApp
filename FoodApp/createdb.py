@@ -2,8 +2,7 @@
 import MySQLdb
 
 def createdatabase():
-    db = MySQLdb.connect(host="localhost", user="root",  db="pythonspot")   # name of the database
-     
+    db = MySQLdb.connect(host="localhost", user="root",  db="pythonspot", password= "Chetu@123")   # name of the database
     # Create a Cursor object to execute queries.
     curr = db.cursor()
 
@@ -57,7 +56,7 @@ def createdatabase():
     #    "  FORIENGE KEY(`menu_id`) references Menu(`menu_id`) ,"
         ")")
 
-    for name, ddl in TABLES.iteritems():
+    for name, ddl in TABLES.items():
         print("Creating table {}: ".format(name))
         curr.execute(ddl)
 
@@ -172,16 +171,16 @@ def createdatabase():
     # Display all the restaurant, menu & menuItems tables items; just for verification that the complete code is working properly
     curr.execute("SELECT * FROM Restaurant")
     for row in curr.fetchall() :
-        print row[0], " ", row[1], " ", row[2], " ", row[3], " ", row[4]
+        print(row[0], " ", row[1], " ", row[2], " ", row[3], " ", row[4])
         
     curr.execute("SELECT * FROM Menu")
     for row in curr.fetchall() :
-    	print row[0], " ", row[1], " ", row[2]
+    	print(row[0], " ", row[1], " ", row[2])
 
 
     curr.execute("SELECT * FROM MenuItems")
     for row in curr.fetchall() :
-        print row[0], " ", row[1], " ", row[2], " ", row[3]
+        print(row[0], " ", row[1], " ", row[2], " ", row[3])
 
     #Finally commit to save the changes and close the connection
     db.commit() 

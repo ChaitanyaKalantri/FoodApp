@@ -10,7 +10,7 @@ orderid = 0
 # The python flask logic will take the help of index.html page to display the restaurant names
 @app.route("/")
 def Restaurant():
-	db_connect = MySQLdb.connect(host="localhost", user="root",  db="pythonspot")
+	db_connect = MySQLdb.connect(host="localhost", user="root",  db="pythonspot", password= "Chetu@123")
 	conn = db_connect.cursor()
 	s = "starting point"
 	return render_template("active.html", result = s)
@@ -28,7 +28,7 @@ def Restaurant():
 @app.route("/", methods=['DELETE'])
 def Edit():
 	global orderid
-	db_connect = MySQLdb.connect(host="localhost", user="root", db="pythonspot")
+	db_connect = MySQLdb.connect(host="localhost", user="root", db="pythonspot", password= "Chetu@123")
 	conn = db_connect.cursor()
 
 	if reques.form.get('editMain'):
@@ -45,7 +45,7 @@ def Edit():
 @app.route("/", methods=['GET','POST'])
 def Menu():
 	global orderid
-	db_connect = MySQLdb.connect(host="localhost", user="root",  db="pythonspot")
+	db_connect = MySQLdb.connect(host="localhost", user="root",  db="pythonspot", password= "Chetu@123")
 	conn = db_connect.cursor()
 
 	if request.form.get('item'):
@@ -144,7 +144,7 @@ def Menu():
 		result = {'OrderItems': [i[1] for i in conn.fetchall()]}
 		return render_template("showOrder.html", result=result )
 	elif request.form.get('edit'):
-		global orderid
+		
 		orderId = request.form.get('edit')
 		query = "DELETE from OrderItem where order_id = %s"
 		conn.execute(query, (orderid,))
